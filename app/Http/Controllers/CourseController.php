@@ -32,7 +32,7 @@ class CourseController extends Controller
     {
         $request->validate([
             'course_title' => 'required',
-            'category_id' => 'required', // تأكد من تحديد اسم الحقل الصحيح هنا (يجب أن يكون "category_id")
+            'category_id' => 'required', 
             'details' =>'required',
             'hours' =>'required',
             'start_date' =>'required',
@@ -100,7 +100,7 @@ class CourseController extends Controller
         return redirect()->route('course.index')
         ->with('success','Courses Deleted successfully');
         } else {
-            return response('File Not Found', 404);
+            return response('Course Not Found', 404);
         }
         
     }
